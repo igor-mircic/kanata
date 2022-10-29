@@ -1,0 +1,53 @@
+(defcfg)
+
+
+(defsrc
+  esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)                          
+                           
+(deflayer qwerty           
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  @tsn q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @env a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl    
+)                                                           
+
+(deflayer sys-nav 
+ XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+ XX   @ml  @atb @mr  f11  XX   XX   XX   XX   XX   XX   XX   XX   XX
+ XX   XX   @mtb M-s  XX   XX   XX   XX   XX   XX   XX   XX   XX
+ XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+ XX   XX   XX             XX             XX   XX   XX                                                            
+)
+
+(defalias              
+  lsn (layer-toggle sys-nav)
+  tsn (tap-hold 150 150 tab @lsn)
+  
+  ml M-C-left
+  mr M-C-rght
+  mtb M-tab
+  atb A-tab
+)                      
+                                                            
+(deflayer nav                                              
+ XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   lrld XX
+ XX   XX   XX   XX   XX   XX   XX   home end  @cbs bspc XX   XX   XX
+ XX   lalt lctl lsft XX   XX   left down up   rght XX   XX   XX
+ XX   XX   XX   XX   XX   XX   del  XX   XX   XX   XX   caps
+ XX   XX   XX             @csp           XX   XX   XX                                                            
+)                                                           
+                                                            
+(defalias              
+  tna (layer-toggle nav)
+  env (tap-hold 150 150 esc @tna)
+  
+  cbs C-bspc
+  csp C-spc
+)                      
+                       

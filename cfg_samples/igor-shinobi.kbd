@@ -20,7 +20,7 @@
 (deflayer sys-nav 
  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
  XX   @ml  @atb @mr  f11  XX   XX   XX   XX   XX   XX   XX   XX   XX
- XX   XX   @mtb M-s  XX   XX   XX   XX   XX   XX   XX   XX   XX
+ XX   @mtb M-s  XX   XX   XX   left down up   rght XX   XX   XX
  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
  XX   XX   XX             XX             XX   XX   XX                                                            
 )
